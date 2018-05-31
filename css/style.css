@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-color: #04AFF5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    font-family: 'Oswald', sans-serif;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    background-color: grey;
+    margin-top: 100vh;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    height: 55%;
+    right: -60%;
+}
+
+header nav {
+    position: absolute;
+    right: 7%;
+    top: 4%;
+    font-size: 3rem;
+}
+
+header hgroup {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.6rem;
+}
+
+header h3 {
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+#arrow {
+    width: 64px;
+    height: 64px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 0px -15px 0 black, 0px -30px 0 black;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+#arrow:hover {
+    text-shadow: 0px -15px 0 white, 0px -30px 0 white;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.fa-angle-down {
+    animation: arrow 1.4s infinite linear;
+}
+
+/*MEDIA QUERIES*/
+
+@media (orientation: portrait) {
+    h3 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+}
+
+@media (orientation: landscape) {
+    header img {
+        height: 60%;
+        right: -10%;
+    }
+}
+
+
+@media (min-width: 500px) {
+    header h1 {
+        font-size: 4rem
+    }
+}
+
+@media (min-width: 500px) and (orientation:landscape) {
+    header h1 {
+        font-size: 3rem
+    }
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 5rem
+    }
+    header img {
+        right: -40%;
+    }
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+    header img {
+        right: -10%;
+    }
+}
+
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 5rem
+    }
+    header img {
+        right: -20%;
+    }
+}
+
+@media (width: 375px) and (height: 812px) {
+    header img {
+        right: -70%;
+    }
+}
+
+/*CSS ANIMATIONS*/
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-80px)
+    }
+    50 {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(80px)
+    }
+}
