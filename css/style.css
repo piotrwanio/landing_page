@@ -9,7 +9,7 @@ html {
 }
 
 header {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #04AFF5;
     position: fixed;
@@ -50,6 +50,7 @@ header nav menu .menu-item {
 
 header nav menu.active {
     width: 90%;
+    height: 100%;
     position: absolute;
     z-index: 3;
     right: -90%;
