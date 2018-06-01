@@ -9,7 +9,7 @@ html {
 }
 
 header {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #04AFF5;
     position: fixed;
@@ -131,47 +131,48 @@ header h3 {
     }
 }
 
-
-@media (min-width: 500px) {
-    header h1 {
-        font-size: 4rem
-    }
-}
-
-@media (min-width: 500px) and (orientation:landscape) {
-    header h1 {
-        font-size: 3rem
-    }
-}
-
-@media (min-width: 768px) {
-    header h1 {
-        font-size: 5rem
-    }
-    header img {
-        right: -40%;
-    }
-}
-
-@media (min-width: 800px) and (orientation: landscape) {
-    header img {
-        right: -10%;
-    }
-}
-
-@media (min-width: 1024px) {
-    header h1 {
-        font-size: 5rem
-    }
-    header img {
-        right: -20%;
-    }
-}
-
 @media (width: 375px) and (height: 812px) {
     header img {
         right: -70%;
     }
+
+    @media (min-width: 500px) {
+        header h1 {
+            font-size: 4rem
+        }
+    }
+
+    @media (min-width: 500px) and (orientation:landscape) {
+        header h1 {
+            font-size: 3rem
+        }
+    }
+
+    @media (min-width: 768px) {
+        header h1 {
+            font-size: 5rem
+        }
+        header img {
+            right: -40%;
+        }
+    }
+
+    @media (min-width: 800px) and (orientation: landscape) {
+        header img {
+            right: -10%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        header h1 {
+            font-size: 5rem
+        }
+        header img {
+            right: -20%;
+        }
+    }
+
+
 }
 
 /*CSS ANIMATIONS*/
